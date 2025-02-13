@@ -1,0 +1,6 @@
+[[ssh-keys]]
+item = "GitHub Auth Key"
+vault = "Personal"
+
+[[ssh-keys]]
+vault = "Personal"
