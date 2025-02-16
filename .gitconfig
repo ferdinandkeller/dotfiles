@@ -13,4 +13,6 @@
     defaultBranch = main
 
 [core]
-    editor = code
+    # editor = code
+    editor = nvim
+    pager = less -R --mouse

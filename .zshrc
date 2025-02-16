@@ -1,9 +1,15 @@
-# Oh My Zsh configuration
+# define XDG parameters for services that support it
+export XDG_CONFIG_HOME="$HOME/.config/"
+
+# load homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# oh-my-zsh configuration
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 zstyle ':omz:update' mode auto
 zstyle ':omz:update' frequency 7
-plugins=(1password git gh multipass docker terraform)
+plugins=(tmux git gh 1password multipass docker terraform)
 source $ZSH/oh-my-zsh.sh
 
 # add 1password SSH socket
@@ -12,14 +18,37 @@ export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/
 # source 1password CLI
 source "$HOME/.config/op/plugins.sh"
 
-# added by LM Studio CLI (lms)
-export PATH="$PATH:$HOME/.cache/lm-studio/bin"
+# enable fuzzy finder
+eval "$(fzf --zsh)"
 
-# added by NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# enable zoxide
+eval "$(zoxide init zsh)"
 
-# terragrunt completion
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /opt/homebrew/bin/terragrunt terragrunt
+# # terragrunt completion
+# autoload -U +X bashcompinit && bashcompinit
+# complete -o nospace -C /opt/homebrew/bin/terragrunt terragrunt
+# . "$HOME/.local/bin/env"
+
+# tmux alias with tx
+# t command show either the list of tmux sessions or
+# easily create/attach to an existing one
+alias tx="tmux"
+t() {
+  if [ -z "$1" ]; then
+    tmux ls
+  else
+    tmux new -A -s "$1"
+  fi
+}
+_t() {
+  local -a sessions
+  sessions=( ${(f)"$(tmux ls -F '#S' 2>/dev/null)"} )
+  _arguments \
+    '1:tmux session name:->session' \
+    '*:: :->args'
+  if [[ $state == session ]]; then
+    compadd -a sessions
+    return
+  fi
+}
+compdef _t t
