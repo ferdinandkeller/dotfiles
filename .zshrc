@@ -9,14 +9,14 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 zstyle ':omz:update' mode auto
 zstyle ':omz:update' frequency 7
-plugins=(tmux git gh 1password multipass docker terraform)
+plugins=(tmux git gh 1password multipass docker minikube terraform)
 source $ZSH/oh-my-zsh.sh
 
 # add 1password SSH socket
 export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 
 # source 1password CLI
-source "$HOME/.config/op/plugins.sh"
+# source "$HOME/.config/op/plugins.sh"
 
 # enable fuzzy finder
 source <(fzf --zsh)
@@ -52,3 +52,7 @@ _t() {
   fi
 }
 compdef _t t
+
+# aliases for lazygit & lazydocker
+alias lg="lazygit"
+alias ld="lazydocker"
