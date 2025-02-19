@@ -56,3 +56,7 @@ compdef _t t
 # aliases for lazygit & lazydocker
 alias lg="lazygit"
 alias ld="lazydocker"
+
+# alias for neovim
+alias nv="nvim"
+
