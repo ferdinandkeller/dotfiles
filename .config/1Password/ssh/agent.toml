@@ -4,3 +4,9 @@ vault = "Personal"
 
 [[ssh-keys]]
 vault = "Personal"
+
+[[ssh-keys]]
+vault = "Employee"
+
+[[ssh-keys]]
+vault = "Shared"
