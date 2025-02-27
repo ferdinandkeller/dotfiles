@@ -16,7 +16,7 @@ source $ZSH/oh-my-zsh.sh
 export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 
 # source 1password CLI
-# source "$HOME/.config/op/plugins.sh"
+source "$HOME/.config/op/plugins.sh"
 
 # enable fuzzy finder
 source <(fzf --zsh)
@@ -59,4 +59,7 @@ alias ld="lazydocker"
 
 # alias for neovim
 alias nv="nvim"
+
+# alias for postgres
+alias psql="psql-17"
 
