@@ -3,13 +3,15 @@ export XDG_CONFIG_HOME="$HOME/.config/"
 
 # load homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
+# load direnv
+eval "$(direnv hook zsh)"
 
 # oh-my-zsh configuration
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 zstyle ':omz:update' mode auto
 zstyle ':omz:update' frequency 7
-plugins=(tmux git gh 1password multipass docker minikube terraform postgresql@17)
+plugins=(tmux git gh 1password multipass docker minikube terraform)
 source $ZSH/oh-my-zsh.sh
 
 # add 1password SSH socket
@@ -62,4 +64,3 @@ alias nv="nvim"
 
 # alias for postgres
 alias psql="psql-17"
-
