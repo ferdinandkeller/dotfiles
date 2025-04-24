@@ -77,3 +77,8 @@ export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 [ -s "$HOME/google-cloud-sdk/path.zsh.inc" ] && . "$HOME/google-cloud-sdk/path.zsh.inc"
 # The next line enables shell command completion for gcloud.
 [ -s "$HOME/google-cloud-sdk/completion.zsh.inc" ] && . "$HOME/google-cloud-sdk/completion.zsh.inc"
+
+# enable ZSH site-functions (notably for justfile completions)
+eval "$(brew shellenv)"
+fpath=($HOMEBREW_PREFIX/share/zsh/site-functions $fpath)
+source $ZSH/oh-my-zsh.sh
