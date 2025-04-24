@@ -69,3 +69,11 @@ export NVM_DIR="$HOME/.nvm"
 
 # alias for postgres
 alias psql="psql-17"
+
+# enable MySQL client
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+[ -s "$HOME/google-cloud-sdk/path.zsh.inc" ] && . "$HOME/google-cloud-sdk/path.zsh.inc"
+# The next line enables shell command completion for gcloud.
+[ -s "$HOME/google-cloud-sdk/completion.zsh.inc" ] && . "$HOME/google-cloud-sdk/completion.zsh.inc"
