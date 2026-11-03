@@ -1,0 +1,65 @@
+# iTerm-like Ghostty configuration
+auto-update = check
+auto-update-channel = tip
+quit-after-last-window-closed = true
+
+# macos-icon = xray
+macos-titlebar-style = tabs
+window-new-tab-position = end
+background-opacity = 0.93
+background-blur-radius = 20
+
+window-step-resize = true
+window-padding-balance = false
+window-padding-x = 14
+window-padding-y = 0
+window-height = 24
+window-width = 83
+window-position-x = 350
+window-position-y = 200
+
+# theme = dark:iTerm2 Pastel Dark Background,light:BlulocoLight
+theme = dark:iTerm2 Pastel Dark Background,light:Havn Daggry
+# theme = Raycast_Light
+# theme = poimandres-light
+# background = #050505
+# background = #fefefe
+# 3024 Day x
+# Adwaita x
+# Alabaster v
+# AtomOneLight x
+# ayu_light boff :/
+# BlulocoLight v
+# Builtin Light x
+# catppuccin-latte ok -
+# CLRS x
+# dawnfox v (avec changement de bg)
+# dayfox x
+# farmhouse-light x
+# Github x
+# Github-Light-Default v
+# Gitlab-Light x
+# Havn Daggry vv
+# iTerm2 Light Background x
+# primary x
+# Raycast_Light v
+# Spring v
+# Tomorrow v
+# Monokai Pro Light x
+# Monokai Pro Light Sun x
+
+
+window-title-font-family = JetBrainsMono Nerd Font Mono
+font-family = JetBrainsMono Nerd Font Mono
+font-style = SemiBold
+font-size = 15
+
+cursor-style = block
+cursor-style-blink = false
+adjust-underline-thickness = 3
+bold-is-bright = true
+
+shell-integration = detect
+shell-integration-features = no-cursor
+
+term = xterm-256color
