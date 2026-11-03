@@ -1,0 +1,30 @@
+[user]
+    name = Ferdinand Keller
+    email = ferdinand.keller@proton.me
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHsRVs1aIXB6URW2Hlz16DlhHW7hxGju39C/sbh0OYcR
+
+[gpg]
+    format = ssh
+
+[gpg "ssh"]
+    program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[commit]
+    gpgsign = true
+[tag]
+    gpgsign = true
+
+[init]
+    defaultBranch = main
+
+[core]
+    # editor = code
+    editor = nvim
+    pager = less -R --mouse
+
+[url "git@github.com:ferdinandkeller/"]
+    insteadOf = "fk:"
+[url "git@github.com:yuzu-hr/"]
+    insteadOf = "yz:"
+[url "git@github.com:"]
+    insteadOf = "gh:"
