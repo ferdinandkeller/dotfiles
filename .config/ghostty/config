@@ -52,6 +52,7 @@ theme = dark:iTerm2 Pastel Dark Background,light:Havn Daggry
 window-title-font-family = JetBrainsMono Nerd Font Mono
 font-family = JetBrainsMono Nerd Font Mono
 font-style = SemiBold
+font-style-bold = ExtraBold
 font-size = 15
 
 cursor-style = block
