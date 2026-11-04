@@ -1,0 +1,13 @@
+[[ssh-keys]]
+item = "ommeqi6plrkav6tjdcjfexc5ey" # auth key
+account = "Ferdinand Keller"
+
+[[ssh-keys]]
+item = "6jbcrtrjfpr2xuw3oe53uvsiya" # signing key
+account = "Ferdinand Keller"
+
+[[ssh-keys]]
+account = "Ferdinand Keller"
+
+[[ssh-keys]]
+account = "Yuzu"

@@ -26,7 +26,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-.config/1Password
 .config/crossnote
 .config/gcloud
 .config/gh
@@ -37,3 +36,6 @@ Temporary Items
 .config/opencode
 .config/zed
 .config/zellij
+
+.ssh/known_hosts
+.ssh/known_hosts.old
