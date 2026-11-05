@@ -34,6 +34,7 @@ Temporary Items
 .config/nvim
 .config/op
 .config/opencode
+.config/swiftpm
 .config/zed
 .config/zellij
 
