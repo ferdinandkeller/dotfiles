@@ -1,5 +1,5 @@
 # iTerm-like Ghostty configuration
-auto-update = check
+auto-update = off
 auto-update-channel = tip
 quit-after-last-window-closed = true
 
