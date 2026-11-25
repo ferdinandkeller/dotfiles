@@ -45,6 +45,8 @@ alias tp="telepresence"
 alias j="just"
 # alias for nix develop
 alias nd="nix develop"
+# alias for finder
+alias ff="open -a Finder ."
 
 # jujutsu completion
 source <(COMPLETE=zsh jj)
